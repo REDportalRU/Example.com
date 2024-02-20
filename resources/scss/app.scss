@@ -1,0 +1,27 @@
+// Переменные
+@import "helpers/variables";
+@import "helpers/mixins";
+@import "helpers/owl_carousel";
+@import "helpers/yatranslate";
+
+// Шапка сайта
+@import "components/header/header_top_line";
+@import "components/header/header_logo";
+@import "components/header/header_menu";
+@import "components/header/header_marquee";
+@import "components/header/header_breadcrumbs";
+
+// Главная страница
+@import "layout/main/main";
+
+// Страница категорий
+@import "layout/category/category";
+
+// Страница новости
+@import "layout/item/item";
+
+// Левый сайдбар
+@import "components/right/right_blocks";
+
+// Футер сайта
+@import "components/footer/footer";

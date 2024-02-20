@@ -1,0 +1,166 @@
+// ===================================
+// Header - Top Line
+// ===================================
+
+.footer,
+.footer_copyright {
+    position:         relative;
+    z-index:          999;
+    background-color: $color-gray4;
+    color:            $color-white4;
+    padding:          15px 50px 0 50px;
+
+    @media screen and (max-width: 575px) {
+        padding: 0;
+    }
+
+    @media screen and (min-width: 1400px) and (max-width: 1599px) {
+        padding: 15px;
+    }
+
+    //-----------------------------
+    // Заголовок новостного блока
+    //-----------------------------
+    .zagl_news_block {
+        h3 {
+            border-left: 6px solid $color-red;
+            margin:      30px 6px 5px 6px;
+
+            @media screen and (max-width: 575px) {
+                margin: 20px 15px 5px 15px;
+            }
+
+            a {
+                position:        relative;
+
+                font-size:       1rem;
+                font-weight:     600;
+                color:           $color-white;
+                padding:         7px 30px 7px 15px;
+                text-transform:  uppercase;
+                text-decoration: none;
+                transition:      all 0.3s;
+
+                @media screen and (max-width: 575px) {
+                    top: -1px;
+                }
+
+                @media screen and (min-width: 576px) {
+                    top: -3px;
+                }
+
+                &:hover {
+                    color:      $color-white;
+                    //border-bottom: 1px solid $color-green;
+                    transition: all 0.3s;
+                }
+            }
+        }
+    }
+
+    .info-bar {
+        margin: 0;
+
+        a {
+            color:               $color-white;
+            font-size:           1rem;
+            // анимация подчеркивания
+            text-decoration:     none;
+            background-image:    linear-gradient(currentColor, currentColor);
+            background-position: 0 100%;
+            background-repeat:   no-repeat;
+            background-size:     0 1px;
+            transition:          0.3s;
+
+            &:hover {
+                // анимация подчеркивания
+                background-size: 100% 1px;
+                transition:      0.3s;
+            }
+
+        }
+
+        // Меню
+        .menu {
+
+            ul {
+                margin:     0;
+                list-style: none;
+
+                li {
+                    text-transform: uppercase;
+
+                    a {
+                        margin:          0 0 0 15px;
+                        padding:         10px 0 3px 0;
+                        font-size:       0.9rem;
+                        color:           $color-white3;
+                        text-decoration: none;
+                        transition:      all 0.3s;
+
+                        &:hover {
+                            color:      $color-white;
+                            transition: all 0.3s;
+                        }
+                    }
+
+                }
+            }
+        }
+
+        // Иконки соц. сетей
+        .icon {
+            padding:          15px 20px 0 20px;
+            background-color: $color-gray2;
+
+            @media screen and (max-width: 991px) {
+                display: none;
+            }
+            @media screen and (min-width: 992px) and (max-width: 1199px) {
+                padding-top: 10px;
+            }
+
+            a {
+                margin:          0;
+                padding:         5px;
+                text-decoration: none;
+                color:           $color-white4;
+                background:      none;
+                transition:      all 0.3s;
+
+                &:hover {
+                    color:      $color-white;
+                    transition: all 0.3s;
+                }
+
+                i {
+                    font-size: 1.4rem;
+                }
+            }
+
+        }
+    }
+
+    .banners {
+        margin:     20px 0;
+        padding:    0;
+        text-align: right;
+
+        a {
+            padding:    5px;
+            display:    inline-block;
+            background: none;
+
+            img {
+                max-width:  170px;
+                max-height: 200px;
+                object-fit: contain;
+            }
+        }
+    }
+}
+
+.footer_copyright {
+    border-top: 1px solid $color-gray2;
+    padding:    0 50px;
+}

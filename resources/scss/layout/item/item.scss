@@ -1,0 +1,235 @@
+// ===================================
+// Category page
+// ===================================
+
+.item_page {
+    margin:  0;
+    padding: 15px 50px 30px 50px;
+    color:   $color-black;
+
+    @media screen and (max-width: 575px) {
+        padding: 0 15px 25px 15px;
+    }
+
+    @media screen and (min-width: 1400px) and (max-width: 1599px) {
+        padding: 15px 15px 30px 15px;
+    }
+
+    //-----------------------------
+    // Заголовок новостного блока
+    //-----------------------------
+    .zagl_news_block {
+        //position: relative;
+
+        h3 {
+            border-left: 6px solid $color-red;
+            margin:      30px 6px 5px 6px;
+
+            @media screen and (max-width: 575px) {
+                background-color: $color-white;
+                box-shadow:       0 2px 3px 3px rgba(150, 150, 150, 0.1);
+            }
+
+            a {
+                position:        relative;
+
+                font-size:       1rem;
+                font-weight:     600;
+                color:           $color-gray4;
+                padding:         7px 30px 7px 15px;
+                text-transform:  uppercase;
+                text-decoration: none;
+                transition:      all 0.3s;
+                background:      none;
+
+                @media screen and (max-width: 575px) {
+                    top: -1px;
+                }
+
+                @media screen and (min-width: 576px) {
+                    top:              -3px;
+                    background-color: $color-white;
+                    box-shadow:       0 2px 3px 3px rgba(150, 150, 150, 0.1);
+                }
+
+                &:hover {
+                    color:      $color-red;
+                    //background-color: $color-red;
+                    transition: all 0.3s;
+                }
+            }
+        }
+    }
+
+    // Центрирование картинок
+    figure[class='image_resized'] {
+        float:  left;
+        margin: 10px;
+    }
+
+    figure[class='image image_resized'] {
+        display:  block;
+        position: relative;
+        margin:   10px auto;
+    }
+
+    figure[class='image image_resized image-style-side'] {
+        float:  right;
+        margin: 10px;
+    }
+
+
+    h2 {
+        font-size: 2.0rem;
+        color:     $color-black;
+
+        span {
+            font-size: 2.0rem;
+            color:     $color-black;
+        }
+    }
+
+    h3 {
+        font-size: 1.6rem;
+        color:     $color-black;
+
+        span {
+            font-size: 1.6rem;
+            color:     $color-black;
+        }
+    }
+
+    h4 {
+        font-size: 1.2rem;
+        color:     $color-black;
+
+        span {
+            font-size: 1.2rem;
+            color:     $color-black;
+        }
+    }
+
+    p {
+        color: $color-black;
+
+        span {
+            font-size: 1rem;
+            color:     $color-black;
+            display:   inline;
+        }
+    }
+
+    a {
+        font-size:           0.95rem;
+        font-weight:         500;
+        color:               $color-red;
+
+        // анимация подчеркивания
+        text-decoration:     none;
+        background-image:    linear-gradient(currentColor, currentColor);
+        background-position: 0 100%;
+        background-repeat:   no-repeat;
+        background-size:     0 1px;
+        transition:          0.3s;
+
+        &:hover {
+            // анимация подчеркивания
+            background-size: 100% 1px;
+            transition:      0.3s;
+            color:           $color-red;
+        }
+    }
+
+    // Центрирование картинок
+    figure[class='table'] {
+        table {
+            width: 100%;
+
+            tr {
+                td {
+                    color:   $color-black;
+                    padding: 10px;
+                }
+            }
+        }
+    }
+
+    .filters {
+        text-align:       right;
+        margin:           10px 7px 5px 7px;
+        padding:          13px 10px 10px 10px;
+        background-color: $color-white;
+        box-shadow:       0 2px 3px 3px rgba(150, 150, 150, 0.1);
+
+        > h4 {
+            display:   inline-block;
+            font-size: 1.0rem;
+            margin:    7px 10px 5px 10px;
+        }
+    }
+
+    select {
+        width:         auto;
+        display:       inline;
+        color:         $color-gray4;
+        font-size:     1.0rem;
+        border:        1px solid $color-white3;
+        border-radius: 0;
+
+        &:focus,
+        &:active,
+        &:hover {
+            border:  1px solid $color-white3;
+            outline: 4px solid $color-white;
+        }
+    }
+
+    button {
+        //position:       relative;
+        //top:            0px;
+        text-transform: uppercase;
+        font-size:      0.80rem;
+        padding:        6px 20px;
+        border-radius:  0;
+    }
+
+    //-----------------------------
+    // Правая колонка
+    //-----------------------------
+    .right_sidebar {
+        margin:  0;
+        padding: 0 0 0 15px;
+
+        @media screen and (max-width: 1399px) {
+            display: none;
+        }
+    }
+
+    @media screen and (max-width: 1199px) {
+        figure {
+            max-width: 100%;
+        }
+        img {
+            max-width: 100%;
+        }
+    }
+
+}
+
+.banners {
+    margin: 25px 50px 50px 50px;
+
+    marquee {
+        position: relative;
+
+        a {
+            padding: 0 50px;
+
+            img {
+                max-width: 200px;
+                //max-height: 120px;
+                //object-fit: cover;
+            }
+        }
+    }
+}

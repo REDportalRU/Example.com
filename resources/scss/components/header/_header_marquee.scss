@@ -1,0 +1,142 @@
+// ===================================
+// Header - Marquee Line
+// ===================================
+
+.marquee_line {
+    position:         relative;
+    background-color: $color-white;
+    border-bottom:    1px solid $color-white2;
+    z-index:          996;
+
+    @media screen and (max-width: 768px) {
+        display: none;
+    }
+
+    // Слоган бегущей строки
+    .marquee_slogan {
+        position:     relative;
+        left:         -25px;
+        z-index:      995;
+        padding:      7px 35px;
+        padding-left: 75px;
+
+        @media screen and (min-width: 1400px) and (max-width: 1599px) {
+            left:    -15px;
+            padding: 7px 35px;
+        }
+
+        // Мерцающий круг
+        i {
+            position: relative;
+            top:      3px;
+            color:    $color-green;
+        }
+
+        // Слоган
+        span {
+            position:    relative;
+            top:         -2px;
+            display:     inline;
+            font-size:   1.1rem;
+            font-weight: 600;
+        }
+
+        // Наклонный серый блок
+        &::before {
+            content:    '';
+            position:   absolute;
+            top:        0;
+            right:      0;
+            bottom:     0;
+            left:       0;
+            z-index:    -1;
+            background: $color-white2;
+            transform:  skewX(30deg);
+        }
+    }
+
+    // Блок бегущей строки
+    .marquee {
+        position:    relative;
+        top:         0;
+        right:       50px;
+        margin:      13px 0 0 0;
+        padding:     0;
+        max-width:   100%;
+        font-weight: 500;
+        white-space: nowrap;
+        overflow:    hidden;
+        box-sizing:  border-box;
+
+        .fon {
+            position:   absolute;
+            top:        -13px;
+            right:      0;
+            width:      100px;
+            height:     47px;
+
+            background: rgb(255, 255, 255);
+            background: -moz-linear-gradient(
+                                        90deg,
+                                        rgba(255, 255, 255, 0) 0%,
+                                        rgba(255, 255, 255, 0.76234243697479) 40%,
+                                        rgba(255, 255, 255, 1) 100%
+                        );
+            background: -webkit-linear-gradient(
+                                        90deg,
+                                        rgba(255, 255, 255, 0) 0%,
+                                        rgba(255, 255, 255, 0.76234243697479) 40%,
+                                        rgba(255, 255, 255, 1) 100%
+                        );
+            background: linear-gradient(
+                                        90deg,
+                                        rgba(255, 255, 255, 0) 0%,
+                                        rgba(255, 255, 255, 0.76234243697479) 40%,
+                                        rgba(255, 255, 255, 1) 100%
+                        );
+            filter:     progid:DXImageTransform.Microsoft.gradient(
+                                        startColorstr="#ffffff",
+                                        endColorstr="#ffffff",
+                                        GradientType=1
+                        );
+        }
+
+
+        ul {
+            margin:       0;
+            padding:      0;
+            padding-left: 100%;
+            list-style:   none;
+            display:      inline-block;
+            animation:    marquee 115s linear infinite;
+
+            &:hover {
+                animation-play-state: paused
+            }
+
+            li {
+                display:       inline;
+                padding-right: 100px;
+
+                a {
+                    font-size:       1rem;
+                    font-weight:     500;
+                    color:           $color-gray3;
+                    text-decoration: none;
+                    transition:      all 0.3s;
+
+                    &:hover {
+                        color:      $color-red;
+                        transition: all 0.3s;
+                    }
+                }
+            }
+        }
+    }
+
+    @keyframes marquee {
+        0% { transform: translate(0, 0); }
+        100% { transform: translate(-100%, 0); }
+    }
+
+}
